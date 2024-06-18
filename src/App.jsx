@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+import Joke from './jokes.jsx'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App () {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <h1>Dana's Jokes</h1>
+
+      <Joke 
+      setup="What is my preferred type of sushi?"
+      punchline="Payroll."
+      />
+
+      <Joke
+      setup="What’s the most detail-oriented ocean?"
+      punchline="The Pacific."
+      />
+          
+      <Joke
+      setup="What kind of bird is always getting hurt?"
+      punchline="The owl."
+      />
+
+      <Joke
+      setup="Why is cold water so insecure?"
+      punchline="Because it’s never called hot."
+      />
+
+      <Joke
+      setup="What do you call a can opener that doesn't work?"
+      punchline="A can't opener."
+      />
+
+      <Joke
+      setup="What do you call two monkeys that share an Amazon account?"
+      punchline="Prime mates."
+      />
+
+
+    </div>
   )
 }
 
-export default App
